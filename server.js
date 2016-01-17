@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var app = express();
 require('dotenv').load();
 
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGO_URI || 'mongodb://heroku_3crsww9t:rcdg7ddmf5barf6a1mt597du86@ds047095.mongolab.com:47095/heroku_3crsww9t');
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
