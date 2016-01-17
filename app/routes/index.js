@@ -14,6 +14,9 @@ module.exports = function (app) {
 		
 	app.route('/api/imagesearch/:searchterms')
 		.get(searchHandler.search);
+		
+	app.route('/api/latest/imagesearch')
+		.get(searchHandler.getRecentSearches);
 };
 
 
