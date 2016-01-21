@@ -22,8 +22,8 @@ function SearchHandler () {
     };
     
     function searchFor(searchterms, offset, res){
-    	var key = 'AIzaSyCyYoDaLp53gObfXvhlG90mU1YBEHc-VVE';
-    	var cx = '006678107556890717824:m-ee3ajzam8';
+    	var key = process.env.GOOGLE_KEY;
+    	var cx = process.env.GOOGLE_CX;
     	if (!offset) offset = '10';
     	var queryString = 'https://www.googleapis.com/customsearch/v1?q=' + searchterms + '&start=' + offset  + '&cx=' + cx + '&searchType=image&key=' + key;
     	var allData = '';
